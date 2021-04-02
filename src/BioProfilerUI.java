@@ -11,8 +11,11 @@ public class BioProfilerUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         nameTextField = new javax.swing.JTextField();
         yearsTextField = new javax.swing.JTextField();
+        genMale = new javax.swing.JRadioButton();
+        genFemale = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         catButton = new javax.swing.JButton();
@@ -33,7 +36,12 @@ public class BioProfilerUI extends javax.swing.JFrame {
 
         jLabel3.setText("Age");
 
-        yearsTextField.setToolTipText("");
+        jLabel4.setText("Gender");
+
+        nameTextField.setToolTipText ("Enter the name you want in the profile.");
+        yearsTextField.setToolTipText("Enter your age.");
+        genFemale.setText("Female");
+        genMale.setText("Male");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -42,12 +50,15 @@ public class BioProfilerUI extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel4)
                                         .addComponent(jLabel3)
                                         .addComponent(jLabel2))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(nameTextField)
-                                        .addComponent(yearsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(yearsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent (genMale))
+                                        .addComponent (genFemale)
                                 .addGap(51, 51, 51))
         );
         jPanel1Layout.setVerticalGroup(
@@ -61,12 +72,17 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel3)
                                         .addComponent(yearsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(34, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel4)
+                                        .addComponent(genMale)
+                                        .addComponent(genFemale))
+                                .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 2, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 36));
         jLabel1.setForeground(new java.awt.Color(153, 102, 0));
-        jLabel1.setText("Profile Bio Builder        ");
+        jLabel1.setText("Bio Profiler");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Choose What Kind of Profile"));
 
@@ -282,12 +298,15 @@ public class BioProfilerUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameTextField;
+    private javax.swing.JTextField yearsTextField;
+    private javax.swing.JRadioButton genMale;
+    private javax.swing.JRadioButton genFemale;
     private javax.swing.JTextArea profileTextArea;
     private javax.swing.JButton resetButton;
-    private javax.swing.JTextField yearsTextField;
 }

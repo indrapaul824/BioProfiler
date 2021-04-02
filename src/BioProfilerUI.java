@@ -14,8 +14,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         nameTextField = new javax.swing.JTextField();
         yearsTextField = new javax.swing.JTextField();
-        genMale = new javax.swing.JRadioButton();
-        genFemale = new javax.swing.JRadioButton();
+        genMaleRadio = new javax.swing.JRadioButton();
+        genFemaleRadio = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         catButton = new javax.swing.JButton();
@@ -40,8 +40,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
 
         nameTextField.setToolTipText ("Enter the name you want in the profile.");
         yearsTextField.setToolTipText("Enter your age.");
-        genFemale.setText("Female");
-        genMale.setText("Male");
+        genFemaleRadio.setText("Female");
+        genMaleRadio.setText("Male");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -57,8 +57,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(nameTextField)
                                         .addComponent(yearsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent (genMale))
-                                        .addComponent (genFemale)
+                                        .addComponent (genMaleRadio)
+                                        .addComponent (genFemaleRadio))
                                 .addGap(51, 51, 51))
         );
         jPanel1Layout.setVerticalGroup(
@@ -75,8 +75,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel4)
-                                        .addComponent(genMale)
-                                        .addComponent(genFemale))
+                                        .addComponent(genMaleRadio)
+                                        .addComponent(genFemaleRadio))
                                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -305,8 +305,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField yearsTextField;
-    private javax.swing.JRadioButton genMale;
-    private javax.swing.JRadioButton genFemale;
+    private javax.swing.JRadioButton genMaleRadio;
+    private javax.swing.JRadioButton genFemaleRadio;
     private javax.swing.JTextArea profileTextArea;
     private javax.swing.JButton resetButton;
 }

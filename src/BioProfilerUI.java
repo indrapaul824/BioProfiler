@@ -1,4 +1,4 @@
-
+import javax.swing.*;
 
 public class BioProfilerUI extends javax.swing.JFrame {
     //creates a new form
@@ -16,6 +16,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
         yearsTextField = new javax.swing.JTextField();
         genMaleRadio = new javax.swing.JRadioButton();
         genFemaleRadio = new javax.swing.JRadioButton();
+        genGroup = new javax.swing.ButtonGroup ();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         catButton = new javax.swing.JButton();
@@ -42,6 +43,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
         yearsTextField.setToolTipText("Enter your age.");
         genFemaleRadio.setText("Female");
         genMaleRadio.setText("Male");
+        genGroup.add (genFemaleRadio);
+        genGroup.add (genMaleRadio);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -61,21 +64,23 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                         .addComponent (genFemaleRadio))
                                 .addGap(51, 51, 51))
         );
+
         jPanel1Layout.setVerticalGroup(
                 jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(13, 13, 13)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel2)
-                                        .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(nameTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel3)
-                                        .addComponent(yearsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(yearsTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel4)
-                                        .addComponent(genMaleRadio)
+                                        .addComponent(genMaleRadio))
+                                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(genFemaleRadio))
                                 .addContainerGap(18, Short.MAX_VALUE))
         );
@@ -307,6 +312,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     private javax.swing.JTextField yearsTextField;
     private javax.swing.JRadioButton genMaleRadio;
     private javax.swing.JRadioButton genFemaleRadio;
+    private javax.swing.ButtonGroup genGroup;
     private javax.swing.JTextArea profileTextArea;
     private javax.swing.JButton resetButton;
 }

@@ -1,6 +1,10 @@
 import javax.swing.*;
 
 public class BioProfilerUI extends javax.swing.JFrame {
+    private javax.swing.JTextField nameTextField;
+    private javax.swing.JTextField ageTextField;
+    private javax.swing.JTextArea profileTextArea;
+
     //creates a new form
     public BioProfilerUI() {
         initComponents();
@@ -8,25 +12,25 @@ public class BioProfilerUI extends javax.swing.JFrame {
 
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        nameTextField = new javax.swing.JTextField();
-        yearsTextField = new javax.swing.JTextField();
-        genMaleRadio = new javax.swing.JRadioButton();
-        genFemaleRadio = new javax.swing.JRadioButton();
-        genGroup = new javax.swing.ButtonGroup ();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        catButton = new javax.swing.JButton();
-        dogButton = new javax.swing.JButton();
-        goldfishButton = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        profileTextArea = new javax.swing.JTextArea();
-        exitButton = new javax.swing.JButton();
-        resetButton = new javax.swing.JButton();
+        JPanel jPanel1 = new JPanel ();
+        JPanel jPanel2 = new JPanel ();
+        JPanel jPanel3 = new JPanel ();
+        JLabel jLabel1 = new JLabel ();
+        JLabel jLabel2 = new JLabel ();
+        JLabel jLabel3 = new JLabel ();
+        JLabel jLabel4 = new JLabel ();
+        nameTextField = new JTextField ();
+        ageTextField = new JTextField ();
+        JRadioButton genMaleRadio = new JRadioButton ();
+        JRadioButton genFemaleRadio = new JRadioButton ();
+        ButtonGroup genGroup = new ButtonGroup ();
+        JButton instaButton = new JButton ();
+        JButton linkedButton = new JButton ();
+        JButton twitterButton = new JButton ();
+        JScrollPane jScrollPane1 = new JScrollPane ();
+        profileTextArea = new JTextArea ();
+        JButton exitButton = new JButton ();
+        JButton resetButton = new JButton ();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Personal Bio Profiler");
@@ -40,7 +44,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
         jLabel4.setText("Gender");
 
         nameTextField.setToolTipText ("Enter the name you want in the profile.");
-        yearsTextField.setToolTipText("Enter your age.");
+        ageTextField.setToolTipText("Enter your age.");
         genFemaleRadio.setText("Female");
         genMaleRadio.setText("Male");
         genGroup.add (genFemaleRadio);
@@ -56,10 +60,10 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                         .addComponent(jLabel4)
                                         .addComponent(jLabel3)
                                         .addComponent(jLabel2))
-                                .addGap(18, 18, 18)
+                                .addGap(20, 20, 20)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(nameTextField)
-                                        .addComponent(yearsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ageTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent (genMaleRadio)
                                         .addComponent (genFemaleRadio))
                                 .addGap(51, 51, 51))
@@ -75,7 +79,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel3)
-                                        .addComponent(yearsTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(ageTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel4)
@@ -87,28 +91,28 @@ public class BioProfilerUI extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 36));
         jLabel1.setForeground(new java.awt.Color(153, 102, 0));
-        jLabel1.setText("Bio Profiler");
+        jLabel1.setText("Bio Profiler       ");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Choose What Kind of Profile"));
 
-        catButton.setText("Instagram");
-        catButton.addActionListener(new java.awt.event.ActionListener() {
+        instaButton.setText("Instagram");
+        instaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                catButtonActionPerformed(evt);
+                instaButtonActionPerformed(evt);
             }
         });
 
-        dogButton.setText("LinkedIn");
-        dogButton.addActionListener(new java.awt.event.ActionListener() {
+        linkedButton.setText("LinkedIn");
+        linkedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dogButtonActionPerformed(evt);
+                linkedButtonActionPerformed(evt);
             }
         });
 
-        goldfishButton.setText("Twitter");
-        goldfishButton.addActionListener(new java.awt.event.ActionListener() {
+        twitterButton.setText("Twitter");
+        twitterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                goldfishButtonActionPerformed(evt);
+                twitterButtonActionPerformed(evt);
             }
         });
 
@@ -118,28 +122,28 @@ public class BioProfilerUI extends javax.swing.JFrame {
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
-                                .addComponent(catButton, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(instaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(dogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(linkedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
-                                .addComponent(goldfishButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(twitterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(14, 14, 14))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[]{catButton, dogButton, goldfishButton});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[]{instaButton, linkedButton, twitterButton});
 
         jPanel2Layout.setVerticalGroup(
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(17, 17, 17)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(catButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(dogButton)
-                                        .addComponent(goldfishButton))
+                                        .addComponent(instaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(linkedButton)
+                                        .addComponent(twitterButton))
                                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[]{catButton, dogButton, goldfishButton});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[]{instaButton, linkedButton, twitterButton});
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Generated Profile Bio"));
 
@@ -234,7 +238,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     private int getYearsEntered() {
         int years = 0;
         try {
-            years = Integer.parseInt(yearsTextField.getText().trim());
+            years = Integer.parseInt(ageTextField.getText().trim());
         } catch (NumberFormatException e) {
             years = 0;
         }
@@ -256,11 +260,11 @@ public class BioProfilerUI extends javax.swing.JFrame {
 
     public void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {
         nameTextField.setText("");
-        yearsTextField.setText("");
+        ageTextField.setText("");
         profileTextArea.setText("");
     }
 
-    public void catButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    public void instaButtonActionPerformed(java.awt.event.ActionEvent evt) {
         //code that handles cat button click:
 
         User myUser = new Instagram(getNameEntered(), getYearsEntered(), getGenderEntered());
@@ -269,7 +273,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
         profileTextArea.setText(description);
     }
 
-    public void dogButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    public void linkedButtonActionPerformed(java.awt.event.ActionEvent evt) {
         //code that handles dog button clicks
 
         User myUser = new LinkedIn(getNameEntered(), getYearsEntered(), getGenderEntered());
@@ -278,7 +282,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
         profileTextArea.setText(description);
     }
 
-    private void goldfishButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    private void twitterButtonActionPerformed(java.awt.event.ActionEvent evt) {
         //code that handles goldfish button click
         User myUser = new Twitter(getNameEntered(), getYearsEntered(), getGenderEntered());
 
@@ -295,24 +299,4 @@ public class BioProfilerUI extends javax.swing.JFrame {
         });
     }
 
-    //variable declaration
-    private javax.swing.JButton catButton;
-    private javax.swing.JButton dogButton;
-    private javax.swing.JButton exitButton;
-    private javax.swing.JButton goldfishButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameTextField;
-    private javax.swing.JTextField yearsTextField;
-    private javax.swing.JRadioButton genMaleRadio;
-    private javax.swing.JRadioButton genFemaleRadio;
-    private javax.swing.ButtonGroup genGroup;
-    private javax.swing.JTextArea profileTextArea;
-    private javax.swing.JButton resetButton;
 }

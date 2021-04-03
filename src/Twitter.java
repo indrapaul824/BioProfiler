@@ -4,4 +4,12 @@ public class Twitter extends User
     {
         super(name, age, gender);
     }
+
+
+    //polymorphism
+    @Override
+    public String selfDescribe() {
+        //immediate ancestor
+        return super.selfDescribe() + "Coffee and Music are my lifeline!";
+    }
 }

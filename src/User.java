@@ -32,25 +32,25 @@ public class User
     {
         if (age < 13)
         {
-            return "A kid with the brightest future ahead. ";
+            return "a kid with the brightest future ahead. ";
         }
 
         else if (age >= 13 && age < 20)
         {
-            return "A teenager who loves learning new things. ";
+            return "a teenager who is learning a whole lot of new things. ";
         }
 
-        else if (age >= 20 && age < 35)
+        else if (age >= 20 && age < 30)
         {
-            return "A responsible youth of the society who wants to do something Big and appreciative! ";
+            return "a cheerful youth exploring the ways of the world. ";
         }
         
-        else if (age >= 35 && age < 50)
+        else if (age >= 30 && age < 60)
         {
-        	return "This is your new birth after completing 18 years of your life, do something that resonates. ";
+        	return "a responsible citizen of the society who wants to do something Big and Appreciative! ";
         }
 
-        return "A retired senior citizen of the society always look forward to share my life experience and flaws. ";
+        return "a retired senior citizen of the society who is grateful to be sharing his life experiences and flaws. ";
 
         }
 }

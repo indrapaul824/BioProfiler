@@ -1,3 +1,8 @@
+interface genderDescribe
+{
+    String platformGenDescribe(String gender);
+}
+
 public class User
 {
     //properties
@@ -22,6 +27,10 @@ public class User
         this.ageMultiplier = ageMultiplier;
     }
      */
+
+    public String getGender () {
+        return gender;
+    }
 
     public String selfDescribe()
     {

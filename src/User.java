@@ -27,6 +27,7 @@ public class User
     {
         return "Hello my name is " + name + ". I am " + findAgeGroup();
     }
+
     public String findAgeGroup()
     {
         if (age < 13)
@@ -41,20 +42,15 @@ public class User
 
         else if (age >= 20 && age < 35)
         {
-            return "A responsible youth of the society who wants to do something Big and appreciative !";
+            return "A responsible youth of the society who wants to do something Big and appreciative! ";
         }
         
-        else if (age >= 20 && age < 35)
+        else if (age >= 35 && age < 50)
         {
-        	return "This is your new birth after completing 18 years of your life , do something that resonates .";
-        }
-        
-        
-        else if ( age > 55)
-        {
-        	return "A retired senior citizen of the society always look forward to share my life experience and flaws .  ";
+        	return "This is your new birth after completing 18 years of your life, do something that resonates. ";
         }
 
-        return "Females always have to work hard to prove themselves, but they never quit !";
-    }
+        return "A retired senior citizen of the society always look forward to share my life experience and flaws. ";
+
+        }
 }

@@ -4,6 +4,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField ageTextField;
     private javax.swing.JTextArea profileTextArea;
+    private javax.swing.ButtonGroup genGroup;
 
     //creates a new form
     public BioProfilerUI() {
@@ -23,7 +24,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
         ageTextField = new JTextField ();
         JRadioButton genMaleRadio = new JRadioButton ();
         JRadioButton genFemaleRadio = new JRadioButton ();
-        ButtonGroup genGroup = new ButtonGroup ();
+        genGroup = new ButtonGroup ();
         JButton instaButton = new JButton ();
         JButton linkedButton = new JButton ();
         JButton twitterButton = new JButton ();
@@ -246,7 +247,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     }
 
     private String getGenderEntered() {
-        String gender = nameTextField.getText().trim();
+        String gender = genGroup.getSelection ().toString ().trim ();
 
         if (gender.length() == 0) {
             gender = "Unknown";
@@ -259,9 +260,10 @@ public class BioProfilerUI extends javax.swing.JFrame {
     }
 
     public void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        nameTextField.setText("");
-        ageTextField.setText("");
-        profileTextArea.setText("");
+        nameTextField.setText ("");
+        ageTextField.setText ("");
+        genGroup.clearSelection ();
+        profileTextArea.setText ("");
     }
 
     public void instaButtonActionPerformed(java.awt.event.ActionEvent evt) {

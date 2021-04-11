@@ -276,8 +276,9 @@ public class BioProfilerUI extends javax.swing.JFrame {
     }
 
     public void linkedButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        //code that handles dog button clicks
-
+        //code that handles dog button click
+   
+        
         User myUser = new LinkedIn(getNameEntered(), getYearsEntered(), getGenderEntered());
 
         String description = myUser.selfDescribe();

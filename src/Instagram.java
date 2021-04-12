@@ -14,6 +14,7 @@ public class Instagram extends User implements genderDescribe
         return super.selfDescribe() + "Super funny and ready to party! ";
     }
 
+ 
  public String platformGenDescribe(String gender) {
     	
     	if(gender == "male") {

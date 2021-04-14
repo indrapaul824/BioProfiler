@@ -18,7 +18,7 @@ public class Twitter extends User implements genderDescribe
     	if(gender == "male") {
     		return "Wants to put a good aspect of the male society";
     	}
-    	
+    	 
     	else {
     		return "A small part of the struggling female society";
     	}

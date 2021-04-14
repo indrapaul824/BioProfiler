@@ -10,7 +10,9 @@ public class BioProfilerUI extends javax.swing.JFrame {
     public BioProfilerUI() {
         initComponents();
     }
-
+  
+    
+    
     private void initComponents() {
 
         JPanel jPanel1 = new JPanel ();
@@ -89,6 +91,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                         .addComponent(genFemaleRadio))
                                 .addContainerGap(18, Short.MAX_VALUE))
         );
+        
+        
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 36));
         jLabel1.setForeground(new java.awt.Color(153, 102, 0));
@@ -110,6 +114,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
             }
         });
 
+        
+        
         twitterButton.setText("Twitter");
         twitterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +150,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        
+        
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[]{instaButton, linkedButton, twitterButton});
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Generated Profile Bio"));
@@ -170,6 +178,9 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(15, Short.MAX_VALUE))
         );
+        
+        
+        
 
         exitButton.setText("Exit");
         exitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -246,6 +257,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
         return years;
     }
 
+    
+    
     private String getGenderEntered() {
         String gender = genGroup.getSelection ().toString ().trim ();
 
@@ -275,6 +288,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
         profileTextArea.setText(description);
     }
 
+    
+    
     public void linkedButtonActionPerformed(java.awt.event.ActionEvent evt) {
         //code that handles dog button click
    

@@ -11,7 +11,11 @@ public class LinkedIn extends User implements genderDescribe
     public String selfDescribe() {
         //immediate ancestor
         return super.selfDescribe() + "Looking forward to connect with everyone!";
-    }
+    }    
+    
+    
+    
+    
     
  public String platformGenDescribe(String gender) {
     	

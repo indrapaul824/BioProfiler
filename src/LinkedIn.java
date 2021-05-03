@@ -19,7 +19,7 @@ public class LinkedIn extends User implements genderDescribe
     
  public String platformGenDescribe(String gender) {
     	
-    	if(gender == "male") {
+    	if(gender.equals ("male")) {
     		return "Just trying to be better than tomorrow.";
     	}
     	

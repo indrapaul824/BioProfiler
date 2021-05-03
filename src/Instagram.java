@@ -17,7 +17,7 @@ public class Instagram extends User implements genderDescribe
  
  public String platformGenDescribe(String gender) {
     	
-    	if(gender == "male") {
+    	if(gender.equals ("male")) {
     		return "Your Followers are not always your fans";
     	}
     	

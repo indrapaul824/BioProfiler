@@ -236,7 +236,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>
+    }// The UI components design
 
     private String getNameEntered() {
         String name = nameTextField.getText().trim();
@@ -280,8 +280,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     }
 
     public void instaButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        //code that handles cat button click:
-
+        //code that handles Instagram button click
         User myUser = new Instagram(getNameEntered(), getYearsEntered(), getGenderEntered());
 
         String description = myUser.selfDescribe();
@@ -291,9 +290,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     
     
     public void linkedButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        //code that handles dog button click
-   
-        
+        //code that handles LinkedIn button click
         User myUser = new LinkedIn(getNameEntered(), getYearsEntered(), getGenderEntered());
 
         String description = myUser.selfDescribe();
@@ -301,7 +298,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     }
 
     private void twitterButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        //code that handles goldfish button click
+        //code that handles Twitter button click
         User myUser = new Twitter(getNameEntered(), getYearsEntered(), getGenderEntered());
 
         String description = myUser.selfDescribe();

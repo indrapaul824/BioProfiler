@@ -17,17 +17,6 @@ public class User
         this.gender = gender;
     }
 
-    /*
-    private int ageMultiplier = 1;
-    //used inheritance to specialize in pet class for the descendant cat and dog
-    public User(String name, int age, String gender, int ageMultiplier)
-    {
-        this.name = name;
-        this.age = age;
-        this.ageMultiplier = ageMultiplier;
-    }
-     */
-
     public String getGender () {
         return gender;
     }
@@ -59,7 +48,7 @@ public class User
         	return "a responsible citizen of the society who wants to do something Big and Appreciative! ";
         }
 
-        return "a retired senior citizen of the society who is grateful to be sharing his life experiences and flaws. ";
+        return "a retired senior citizen of the society. Grateful to share my life experiences and flaws. ";
 
         }
 }

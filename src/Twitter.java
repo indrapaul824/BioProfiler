@@ -16,11 +16,11 @@ public class Twitter extends User implements genderDescribe
     public String platformGenDescribe(String gender) {
     	
     	if(gender.equals ("male")) {
-    		return "Wants to put a good aspect of the male society";
+    		return "Wants to put more efforts in developement of society";
     	}
     	 
     	else {
-    		return "A small part of the struggling female society";
+    		return "Want to show Women can do better in the Society .";
     	}
     }
 }

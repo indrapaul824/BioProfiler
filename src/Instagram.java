@@ -1,30 +1,30 @@
 public class Instagram extends User implements genderDescribe
 {
-    //inheritance: inherits the properties and definitions of pet class
+    //inheritance: inherits the properties and definitions of User class
     public Instagram(String name, int age, String gender)
     {
         super(name, age, gender);
     }
 
-    //polymorphism in java: an object can have many forms
-    //taking selfDescribe() method from pet and creating another form of it!
+    //polymorphism: taking selfDescribe() method from User and creating another form of it!
     @Override
     public String selfDescribe() {
-        //here fun cat ready to party is added to the suffix of the ancestor class
-        return super.selfDescribe() + platformGenDescribe (getGender ()) + "Super funny and ready to party! ";
+        //here a statement is added to the suffix of the ancestor class
+        return super.selfDescribe() + platformGenDescribe (super.getGender ()) + "My life is better than my daydreams!";
     }
- 
-     public String platformGenDescribe(String gender) {
 
-            if(gender.equals ("male")) {
-                return "   Your Followers are not always your fans.   ";
-            }
+    // implementing platformGenDescribe according to gender and platform
+    public String platformGenDescribe(String gender) {
 
-            else if(gender.equals ("female")) {
-                return "   Having a lot of fun with respect.   ";
-            }
+        if(gender.equals ("Male")) {
+            return "Mr. Perfect describes me best. ";
+        }
 
-            else
-                return "";
+        else if(gender.equals ("Female")) {
+            return "Beauty and simplicity defines me. ";
+        }
+
+        else
+            return "";
         }
 }

@@ -1,10 +1,15 @@
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class BioProfilerUI extends javax.swing.JFrame {
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField ageTextField;
     private javax.swing.JTextArea profileTextArea;
     private javax.swing.ButtonGroup genGroup;
+    private javax.swing.JRadioButton genMaleRadio;
+    private javax.swing.JRadioButton genFemaleRadio;
 
     //creates a new form
     public BioProfilerUI() {
@@ -24,8 +29,8 @@ public class BioProfilerUI extends javax.swing.JFrame {
         JLabel jLabel4 = new JLabel ();
         nameTextField = new JTextField ();
         ageTextField = new JTextField ();
-        JRadioButton genMaleRadio = new JRadioButton ();
-        JRadioButton genFemaleRadio = new JRadioButton ();
+        genMaleRadio = new JRadioButton ();
+        genFemaleRadio = new JRadioButton ();
         genGroup = new ButtonGroup ();
         JButton instaButton = new JButton ();
         JButton linkedButton = new JButton ();
@@ -94,34 +99,21 @@ public class BioProfilerUI extends javax.swing.JFrame {
         
         
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 36));
+        jLabel1.setFont(new java.awt.Font("Arial Black", Font.BOLD, 36));
         jLabel1.setForeground(new java.awt.Color(153, 102, 0));
         jLabel1.setText("Bio Profiler       ");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("2. Choose What Kind of Profile"));
 
         instaButton.setText("Instagram");
-        instaButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                instaButtonActionPerformed(evt);
-            }
-        });
+        instaButton.addActionListener(this::instaButtonActionPerformed);
 
         linkedButton.setText("LinkedIn");
-        linkedButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                linkedButtonActionPerformed(evt);
-            }
-        });
+        linkedButton.addActionListener(this::linkedButtonActionPerformed);
 
-        
-        
         twitterButton.setText("Twitter");
-        twitterButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                twitterButtonActionPerformed(evt);
-            }
-        });
+        twitterButton.addActionListener(this::twitterButtonActionPerformed);
+
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -137,7 +129,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
                                 .addGap(14, 14, 14))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[]{instaButton, linkedButton, twitterButton});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, instaButton, linkedButton, twitterButton);
 
         jPanel2Layout.setVerticalGroup(
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,7 +144,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
 
         
         
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[]{instaButton, linkedButton, twitterButton});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, instaButton, linkedButton, twitterButton);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Generated Profile Bio"));
 
@@ -183,18 +175,10 @@ public class BioProfilerUI extends javax.swing.JFrame {
         
 
         exitButton.setText("Exit");
-        exitButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitButtonActionPerformed(evt);
-            }
-        });
+        exitButton.addActionListener(this::exitButtonActionPerformed);
 
         resetButton.setText("Reset");
-        resetButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resetButtonActionPerformed(evt);
-            }
-        });
+        resetButton.addActionListener(this::resetButtonActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -248,7 +232,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     }
 
     private int getYearsEntered() {
-        int years = 0;
+        int years;
         try {
             years = Integer.parseInt(ageTextField.getText().trim());
         } catch (NumberFormatException e) {
@@ -258,14 +242,15 @@ public class BioProfilerUI extends javax.swing.JFrame {
     }
 
     
-    
-    private String getGenderEntered() {
-        String gender = genGroup.getSelection ().toString ().trim ();
 
-        if (gender.length() == 0) {
-            gender = "Unknown";
+    private String getGenderEntered() {
+        if (genMaleRadio.isSelected()) {
+            return "Male";
         }
-        return gender;
+        else if (genFemaleRadio.isSelected()) {
+            return "Female";
+        }
+        return "Unknown";
     }
 
     public void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,12 +291,7 @@ public class BioProfilerUI extends javax.swing.JFrame {
     }
 
     public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new BioProfilerUI().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new BioProfilerUI().setVisible(true));
     }
 
 }

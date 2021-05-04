@@ -10,21 +10,20 @@ public class LinkedIn extends User implements genderDescribe
     @Override
     public String selfDescribe() {
         //immediate ancestor
-        return super.selfDescribe() + "Looking forward to connect with everyone!";
-    }    
-    
-    
-    
-    
-    
- public String platformGenDescribe(String gender) {
-    	
-    	if(gender.equals ("male")) {
-    		return "Just trying to be better than tomorrow.";
-    	}
-    	
-    	else {
-    		return "I hope the fathers and mothers of girls will look at them and say yes women can .";
-    	}
+        return super.selfDescribe() + platformGenDescribe (getGender ()) + "Looking forward to connect with everyone!";
     }
+    
+     public String platformGenDescribe(String gender) {
+
+            if(gender.equals ("male")) {
+                return "Just trying to be better than tomorrow.";
+            }
+
+            else if(gender.equals ("female")) {
+                return "I hope the fathers and mothers of girls will look at them and say yes women can .";
+            }
+
+            else
+                return "";
+        }
 }

@@ -11,18 +11,20 @@ public class Instagram extends User implements genderDescribe
     @Override
     public String selfDescribe() {
         //here fun cat ready to party is added to the suffix of the ancestor class
-        return super.selfDescribe() + "Super funny and ready to party! ";
+        return super.selfDescribe() + platformGenDescribe (getGender ()) + "Super funny and ready to party! ";
     }
-
  
- public String platformGenDescribe(String gender) {
-    	
-    	if(gender.equals ("male")) {
-    		return "Your Followers are not always your fans";
-    	}
-    	
-    	else {
-    		return "Having a lot of fun with respect.";
-    	}
-    }
+     public String platformGenDescribe(String gender) {
+
+            if(gender.equals ("male")) {
+                return "Your Followers are not always your fans";
+            }
+
+            else if(gender.equals ("female")) {
+                return "Having a lot of fun with respect.";
+            }
+
+            else
+                return "";
+        }
 }

@@ -1,4 +1,4 @@
-public class LinkedIn extends User implements genderDescribe
+public class LinkedIn extends User
 {
     //inheritance: inherits the properties and definitions of User class
     public LinkedIn(String name, int age, String gender)
@@ -6,24 +6,13 @@ public class LinkedIn extends User implements genderDescribe
         super(name, age, gender);
     }
 
-    //polymorphism
+    //polymorphism: taking selfDescribe() method from User and creating another form of it!
     @Override
     public String selfDescribe() {
-        //immediate ancestor
-        return super.selfDescribe() + platformGenDescribe (getGender ()) + "Looking forward to connect with everyone!";
+        //here a statement is added to the suffix of the ancestor class
+        return super.selfDescribe() + "Focused on improving my skills. Looking forward to connect with everyone!";
     }
-    
-     public String platformGenDescribe(String gender) {
 
-            if(gender.equals ("male")) {
-                return "Just trying to learn more for a better tomorrow.";
-            }
-
-            else if(gender.equals ("female")) {
-                return "I hope evey fathers and mothers of girls will look at them and say yes women can .";
-            }
-
-            else
-                return "";
-        }
+    // Here, we didn't implement the genderDescribe interface because LinkedIn bios are irrelevant
+    // of anyone's gender.
 }

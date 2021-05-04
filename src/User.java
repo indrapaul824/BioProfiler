@@ -6,9 +6,9 @@ interface genderDescribe
 public class User
 {
     //properties
-    private String name = "";
-    private int age = 0;
-    private String gender = "";
+    private final String name;
+    private final int age;
+    private final String gender;
 
     public User(String name, int age, String gender)
     {

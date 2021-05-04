@@ -17,15 +17,18 @@ public class User
         this.gender = gender;
     }
 
+    // method to return gender from user
     public String getGender () {
         return gender;
     }
 
+    // primary method for forming the bio
     public String selfDescribe()
     {
         return "Hello my name is " + name + ". I am " + findAgeGroup();
     }
 
+    // method to allocate appropriate statement according to the age group
     public String findAgeGroup()
     {
         if (age < 13)

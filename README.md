@@ -8,4 +8,4 @@ People, often, face problems with generating a bio for their social media accoun
 
 
 ### Class Diagram: 
-<img src="https://github.com/IndraP24/BioProfiler/blob/main/Class%20Diagram.png">
+<img src="Class Diagram.png">

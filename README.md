@@ -1,5 +1,5 @@
 <h1 align="center">Social Media Bio Profiler</h1> 
-A simple Java project for generating custom Profile Bio for different Social Media platforms.
+A very simple Java project for generating custom Profile Bio for different Social Media platforms.
 
 The GUI was made using **Java Swing and awt** packages and basic **OOP concepts**, like Overriding were used for achieving the desired functionalities.
 
